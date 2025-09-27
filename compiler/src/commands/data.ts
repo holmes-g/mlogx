@@ -114,12 +114,12 @@ export const commands = processCommands({
 
 
 	read: [{
-		args: "output:*number cell:building index:number",
-		description: "Reads a value at index (index) from memory cell (cell) and stores it in (output)."
+		args: "output:*any target:building address:any",
+		description: "Reads a value at index (address) from memory cell (target) or from variable (address) in processor (target), and stores the value in (output)."
 	}],
 	write: [{
-		args: "value:number cell:building index:number",
-		description: "Writes (value) at index (index) to memory cell (cell)."
+		args: "value:any target:building address:any",
+		description: "Writes (value) at index (address) to memory cell (target) or to variable (address) in processor (target)."
 	}],
 	draw: [
 		{
